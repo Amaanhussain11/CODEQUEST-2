@@ -4,11 +4,11 @@
 #include <string>
 
 double usdToEur(double amount) {
-    return amount * 0.8;
+    return amount * 0.84375;
 }
 
 double eurToUsd(double amount) {
-    return amount * 1.2;
+    return amount * 1.18518519;
 }
 
 int main() {
