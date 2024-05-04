@@ -6,6 +6,8 @@
 
 bool checkPassword(std::string password) {
     return password.length() >= 8;
+
+    return 0;
 }
 
 int main() {
