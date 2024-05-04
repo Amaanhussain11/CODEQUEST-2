@@ -3,17 +3,17 @@
 #include <ctime>
 
 void guessNumber() {
-    srand(time(0)); // Seed the random number generator
-    int number = rand() % 100 + 1; // Generates a random number between 1 and 100
+    srand(time(0));
+    int number = rand() % 100 + 1;
     int guess;
 
     while (true) {
         std::cout << "Guess the number (between 1 and 100): ";
         std::cin >> guess;
 
-        if (guess < number) {
+        if (guess > number) {
             std::cout << "Too low! Try again." << std::endl;
-        } else if (guess > number) {
+        } else if (guess <= number) {
             std::cout << "Too high! Try again." << std::endl;
         } else {
             std::cout << "Congratulations! You guessed the number." << std::endl;
