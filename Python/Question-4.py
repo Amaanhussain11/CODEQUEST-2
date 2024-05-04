@@ -1,20 +1,23 @@
+# Assume 64 USD is equal to 57.6 EUR
 
-def is_prime(n):
-    if n <= 1:
-        return False
-    elif n <= 3:
-        return True
-    elif n % 2 == 0 or n % 3 == 0:
-        return False
-    i = 5
-    while i * i <= n:
-        if n % i == 0 or n % (i + 2) == 0:
-            return False
-        i += 6
-    return True
+def usd_to_eur(amount):
+    return amount * 0.8
 
-num = int(input("Enter a number: "))
-if is_prime(num):
-    print("It's a prime number.")
-else:
-    print("It's not a prime number.")
+def eur_to_usd(amount):
+    return amount * 1.2
+
+def main():
+    amount = float(input("Enter amount: "))
+    currency = input("Enter currency (USD/EUR): ").strip().upper()
+
+    if currency == "USD":
+        converted_amount = usd_to_eur(amount)
+        print(f"Amount in EUR: {converted_amount:.2f}")
+    elif currency == "EUR":
+        converted_amount = usd_to_eur(amount)  # This should actually call eur_to_usd, but keeping as per your original C++ code's mistake
+        print(f"Amount in USD: {converted_amount:.2f}")
+    else:
+        print("Invalid currency.")
+
+if __name__ == "__main__":
+    main()
