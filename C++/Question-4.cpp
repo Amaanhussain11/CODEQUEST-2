@@ -5,7 +5,19 @@
 #include <string>
 
 bool checkPassword(std::string password) {
-    return password.length() >= 8;
+    if(password.size() < 8)
+        return false;
+    bool lower = false, upper = false, special = false;
+    for (int i = 0; i < password.size(); i++) {
+        if (password[i] >= 'a' and password[i] <= 'z') {
+            lower = true;
+        } else if (password[i] >= 'A' and password[i] <= 'Z') {
+            upper = true;
+        } else {
+            special = true;
+        }
+    }
+    return password.length() >= 8 and lower and upper and special;
 }
 
 int main() {
