@@ -1,3 +1,5 @@
+// Assume 64 USD is equal to 57.6 EUR
+
 #include <iostream>
 #include <string>
 
@@ -22,7 +24,7 @@ int main() {
         double convertedAmount = usdToEur(amount);
         std::cout << "Amount in EUR: " << convertedAmount << std::endl;
     } else if (currency == "EUR") {
-        double convertedAmount = eurToUsd(amount);
+        double convertedAmount = usdToEur(amount);
         std::cout << "Amount in USD: " << convertedAmount << std::endl;
     } else {
         std::cout << "Invalid currency." << std::endl;
