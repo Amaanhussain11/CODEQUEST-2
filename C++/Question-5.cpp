@@ -2,7 +2,11 @@
 
 // Function to calculate the factorial of a number
 int factorial(int n) {
-        return n * factorial(n - 1);
+    int ans  =1;
+     for(int i =2;i<=n;i++){
+        ans = ans*i;
+     }
+     return ans ;
 }
 
 int main() {
