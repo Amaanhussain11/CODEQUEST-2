@@ -1,3 +1,5 @@
+# Function to calculate the factorial of a number
+
 def factorial(n):
         return n * factorial(n-1)
 
