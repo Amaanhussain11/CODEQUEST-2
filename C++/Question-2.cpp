@@ -4,11 +4,11 @@
 #include <string>
 
 double usdToEur(double amount) {
-    return amount * 0.8;
+    return amount * 0.84375;
 }
 
 double eurToUsd(double amount) {
-    return amount * 1.2;
+    return amount * 1.185;
 }
 
 int main() {
@@ -20,15 +20,15 @@ int main() {
     std::cout << "Enter currency (USD/EUR): ";
     std::cin >> currency;
 
-    if (currency == "USD") {
-        double convertedAmount = usdToEur(amount);
-        std::cout << "Amount in EUR: " << convertedAmount << std::endl;
-    } else if (currency == "EUR") {
-        double convertedAmount = usdToEur(amount);
-        std::cout << "Amount in USD: " << convertedAmount << std::endl;
-    } else {
-        std::cout << "Invalid currency." << std::endl;
-    }
-
+   
+if (currency == "USD") {
+    double convertedAmount = usdToEur(amount);
+    std::cout << "Amount in EUR: " << convertedAmount << std::endl;
+} else if (currency == "EUR") {
+    double convertedAmount = eurToUsd(amount); // Corrected function call
+    std::cout << "Amount in USD: " << convertedAmount << std::endl;
+} else {
+    std::cout << "Invalid currency." << std::endl;
+}
     return 0;
 }
