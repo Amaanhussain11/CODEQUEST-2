@@ -24,7 +24,7 @@ int main() {
         double convertedAmount = usdToEur(amount);
         std::cout << "Amount in EUR: " << convertedAmount << std::endl;
     } else if (currency == "EUR") {
-        double convertedAmount = usdToEur(amount);
+        double convertedAmount = eurToUsd(amount);// change function name from usdtoEur to eurtoUsd
         std::cout << "Amount in USD: " << convertedAmount << std::endl;
     } else {
         std::cout << "Invalid currency." << std::endl;
