@@ -3,15 +3,18 @@
 #include <iostream>
 #include <string>
 
-double usdToEur(double amount) {
+double usdToEur(double amount)
+{
     return amount * 0.8;
 }
 
-double eurToUsd(double amount) {
+double eurToUsd(double amount)
+{
     return amount * 1.2;
 }
 
-int main() {
+int main()
+{
     double amount;
     std::string currency;
 
@@ -20,15 +23,19 @@ int main() {
     std::cout << "Enter currency (USD/EUR): ";
     std::cin >> currency;
 
-    if (currency == "USD") {
+    if (currency == "USD")
+    {
         double convertedAmount = usdToEur(amount);
         std::cout << "Amount in EUR: " << convertedAmount << std::endl;
-    } else if (currency == "EUR") {
-        double convertedAmount = usdToEur(amount);
+    }
+    else if (currency == "EUR")
+    {
+        double convertedAmount = eurToUsd(amount);
         std::cout << "Amount in USD: " << convertedAmount << std::endl;
-    } else {
+    }
+    else
+    {
         std::cout << "Invalid currency." << std::endl;
     }
-
     return 0;
 }
