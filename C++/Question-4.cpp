@@ -5,7 +5,12 @@
 #include <string>
 
 bool checkPassword(std::string password) {
-    return password.length() >= 8;
+    if( password.length() >= 8)
+    {
+        return 1;
+    }
+    else
+        return 0;
 }
 
 int main() {
