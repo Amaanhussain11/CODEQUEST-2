@@ -1,4 +1,4 @@
-# Assume 64 USD is equal to 57.6 EUR
+# Assume 64 USD is equal to 54 EUR
 
 def usd_to_eur(amount):
     return amount * 0.8
