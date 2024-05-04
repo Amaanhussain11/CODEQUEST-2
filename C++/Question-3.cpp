@@ -11,9 +11,9 @@ void guessNumber() {
         std::cout << "Guess the number (between 1 and 100): ";
         std::cin >> guess;
 
-        if (guess > number) {
+        if (guess <= number) {
             std::cout << "Too low! Try again." << std::endl;
-        } else if (guess <= number) {
+        } else if (guess < number) {
             std::cout << "Too high! Try again." << std::endl;
         } else {
             std::cout << "Congratulations! You guessed the number." << std::endl;
