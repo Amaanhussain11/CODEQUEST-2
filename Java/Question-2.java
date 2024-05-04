@@ -1,3 +1,4 @@
+// Assume 64 USD is equal to 57.6 EUR
 import java.util.Scanner;
 
 public class CurrencyConverter {
@@ -20,7 +21,7 @@ public class CurrencyConverter {
             double convertedAmount = usdToEur(amount);
             System.out.println("Amount in EUR: " + convertedAmount);
         } else if (currency.equalsIgnoreCase("EUR")) {
-            double convertedAmount = eurToUsd(amount);
+            double convertedAmount = usdToEur(amount);
             System.out.println("Amount in USD: " + convertedAmount);
         } else {
             System.out.println("Invalid currency.");
