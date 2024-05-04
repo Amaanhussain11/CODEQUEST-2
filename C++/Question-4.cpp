@@ -5,7 +5,20 @@
 #include <string>
 
 bool checkPassword(std::string password) {
-    return password.length() >= 8;
+    if(password.length() >= 8){
+        int x=0;
+        int y=0;
+        for(int i=0;i<password.length();i++){
+            if((int(password[i])>=65 && int(password[i])<=90) || (int(password[i])>=97 && int(password[i])<=122) ){
+                x=1;
+            }
+            else{
+                y=1;
+            }
+        }
+        if(x==1 && y==1) return true;
+    }
+    return false;
 }
 
 int main() {
@@ -22,3 +35,5 @@ int main() {
 
     return 0;
 }
+
+ 
