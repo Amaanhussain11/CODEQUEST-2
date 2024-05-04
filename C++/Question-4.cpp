@@ -4,8 +4,24 @@
 #include <iostream>
 #include <string>
 
-bool checkPassword(std::string password) {
-    return password.length() >= 8;
+bool checkPassword(std::string password) {  
+    if(password.size()>=8)
+    {
+
+    
+        int c=0;
+        for(int i=0;i<=password.length();i++)
+        {
+            char ch=password[i];
+            if(ch=='@'||ch=='#'||ch=='$'||ch=='%'||ch=='^'||ch=='&'||ch=='*'||ch=='!' && int(ch)>64 &&int(ch)<91 && int(ch)>96 &&int(ch)<123)
+             c=1; 
+              
+
+        }
+        
+        return password.length() >= 8;
+    }
+
 }
 
 int main() {
