@@ -5,7 +5,20 @@
 #include <string>
 
 bool checkPassword(std::string password) {
-    return password.length() >= 8;
+    bool lc= false;
+    bool uc= false;
+    for(int i =0;i<password.length();i++){
+        if(password[i]<='Z'&&password[i]>='!'){
+            lc=true;
+            break;
+        }
+        if(password[i]<='a'&&password[i]>='z'){
+            lc=true;
+            break;
+        }
+    }
+    if(password.length() >= 8 &&lc==true&uc==true) return true;
+    return false;
 }
 
 int main() {
@@ -17,7 +30,7 @@ int main() {
     if (checkPassword(password)) {
         std::cout << "Password is valid." << std::endl;
     } else {
-        std::cout << "Password is too short." << std::endl;
+        std::cout << "Password is invalid." << std::endl;
     }
 
     return 0;
