@@ -10,7 +10,7 @@ bool checkPassword(std::string password) {
     for(int i=0;i<password.length();i++){
         if(password[i]>='a' and password[i]<='z') count1=1;
         else if(password[i]>='A' and password[i]<='Z') count2=1;
-        else if(password[i]>='0' and password[i]<='9') continue;
+        else if((password[i]>='0' and password[i]<='9')  or password[i]==' ') continue;
         else count3=1;
 
     }
