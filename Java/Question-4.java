@@ -1,3 +1,6 @@
+// Password should have atleast 8 characters
+// Password must have atleast one lowercase character, one uppercase character and a special character
+
 import java.util.Scanner;
 
 public class PasswordChecker {
