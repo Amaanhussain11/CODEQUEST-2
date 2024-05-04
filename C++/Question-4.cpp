@@ -5,7 +5,18 @@
 #include <string>
 
 bool checkPassword(std::string password) {
-    return password.length() >= 8;
+    if(password.length()<8) return false;
+    int count1=0,count2=0,count3=0;
+    for(int i=0;i<password.length();i++){
+        if(password[i]>='a' and password[i]<='z') count1=1;
+        else if(password[i]>='A' and password[i]<='Z') count2=1;
+        else if((password[i]>='0' and password[i]<='9')  or password[i]==' ') continue;
+        else count3=1;
+
+    }
+    int z=count1+count2+count3;
+    if(z==3) return true;
+    return false;
 }
 
 int main() {
@@ -17,7 +28,7 @@ int main() {
     if (checkPassword(password)) {
         std::cout << "Password is valid." << std::endl;
     } else {
-        std::cout << "Password is too short." << std::endl;
+        std::cout << "Password is invalid" << std::endl;
     }
 
     return 0;
