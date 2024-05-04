@@ -21,7 +21,7 @@ int main() {
     std::cin >> currency;
 
     if (currency == "USD") {
-        double convertedAmount = usdToEur(amount);
+        double convertedAmount = eurToUsd(amount);
         std::cout << "Amount in EUR: " << convertedAmount << std::endl;
     } else if (currency == "EUR") {
         double convertedAmount = usdToEur(amount);
